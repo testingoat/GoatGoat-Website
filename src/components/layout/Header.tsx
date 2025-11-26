@@ -36,7 +36,7 @@ export function Header() {
         >
             <div className="container mx-auto px-6 sm:px-10 max-w-7xl flex items-center justify-between">
                 <a href="#" className="flex items-center gap-3 group">
-                    <div className="relative h-10 w-10 overflow-hidden rounded-xl">
+                    <div className="relative h-16 w-16 overflow-hidden rounded-2xl">
                         <Image
                             src="/Images/goat-logo.png"
                             alt="GoatGoat logo"
