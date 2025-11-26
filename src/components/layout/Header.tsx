@@ -47,7 +47,7 @@ export function Header() {
                         />
                     </div>
                     <span className="text-lg font-bold tracking-tight text-[var(--foreground)]">
-                        GoatGoat
+                        Goat
                     </span>
                 </a>
 

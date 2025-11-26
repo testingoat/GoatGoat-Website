@@ -18,7 +18,7 @@ export function Footer() {
                                 />
                             </div>
                             <span className="text-base font-bold tracking-tight text-slate-100">
-                                GoatGoat
+                                Goat
                             </span>
                         </div>
                         <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
