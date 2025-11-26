@@ -45,7 +45,7 @@ export function TechnologySection() {
                         <div className="mt-1 flex-shrink-0 text-emerald-400">
                             <item.icon size={20} />
                         </div>
-                        <p className="text-sm text-slate-300 leading-relaxed">
+                        <p className="text-sm text-[color:var(--muted-foreground)] leading-relaxed">
                             {item.text}
                         </p>
                     </Card>
