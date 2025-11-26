@@ -54,7 +54,7 @@ export function DownloadSection({ apps }: { apps: AppCard[] }) {
                   rel="noreferrer"
                   className={cn(
                     buttonVariants({ variant: "outline", size: "sm" }),
-                    "w-full justify-start gap-2"
+                    "w-full justify-start gap-2 text-[color:var(--muted-foreground)] border-[color:var(--border)] hover:text-emerald-600 hover:border-emerald-500/60 hover:bg-emerald-500/5"
                   )}
                 >
                   <Apple size={16} />
