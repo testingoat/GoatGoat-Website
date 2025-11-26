@@ -33,7 +33,7 @@ export function HowItWorks() {
         >
             <div className="grid gap-6 md:grid-cols-3">
                 {steps.map((step, index) => (
-                    <Card key={index} className="relative">
+                    <Card key={index} className="relative" tilt>
                         <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 ring-1 ring-emerald-500/20">
                             <step.icon size={24} />
                         </div>

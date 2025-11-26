@@ -92,14 +92,29 @@ body {
   }
 
   .text-gradient-primary {
-    background: linear-gradient(to right, #34d399, #10b981);
+    background: linear-gradient(90deg, #34d399, #10b981, #22d3ee);
+    background-size: 200% 100%;
+    animation: gg-gradient-shift 8s ease-in-out infinite;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   [data-theme="light"] .text-gradient-primary {
-    background: linear-gradient(to right, #059669, #10b981);
+    background: linear-gradient(90deg, #059669, #10b981, #22c55e);
+    background-size: 200% 100%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  @keyframes gg-gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
 }

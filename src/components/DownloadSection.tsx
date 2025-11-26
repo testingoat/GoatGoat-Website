@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/Card";
 import { buttonVariants } from "@/components/ui/Button";
 import { Apple, Play } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 type StoreLinks = {
   url: string;
@@ -31,7 +32,7 @@ export function DownloadSection({ apps }: { apps: AppCard[] }) {
     >
       <div className="grid gap-8 md:grid-cols-3">
         {apps.map((app) => (
-          <Card key={app.role} className="flex flex-col">
+          <Card key={app.role} className="flex flex-col" tilt>
             <div className="mb-4">
               <span className="inline-flex items-center rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-xs font-medium text-emerald-400">
                 {app.role}
@@ -45,26 +46,36 @@ export function DownloadSection({ apps }: { apps: AppCard[] }) {
             </p>
             <div className="flex flex-col gap-3">
               {app.ios && (
-                <a
+                <motion.a
+                  whileHover={{ y: -2 }}
+                  whileTap={{ scale: 0.98 }}
                   href={app.ios.url || "#"}
                   target="_blank"
                   rel="noreferrer"
-                  className={cn(buttonVariants({ variant: "outline", size: "sm" }), "w-full justify-start gap-2")}
+                  className={cn(
+                    buttonVariants({ variant: "outline", size: "sm" }),
+                    "w-full justify-start gap-2"
+                  )}
                 >
                   <Apple size={16} />
                   <span>App Store</span>
-                </a>
+                </motion.a>
               )}
               {app.android && (
-                <a
+                <motion.a
+                  whileHover={{ y: -2, boxShadow: "0 12px 30px rgba(16,185,129,0.35)" }}
+                  whileTap={{ scale: 0.98 }}
                   href={app.android.url || "#"}
                   target="_blank"
                   rel="noreferrer"
-                  className={cn(buttonVariants({ variant: "primary", size: "sm" }), "w-full justify-start gap-2")}
+                  className={cn(
+                    buttonVariants({ variant: "primary", size: "sm" }),
+                    "w-full justify-start gap-2"
+                  )}
                 >
                   <Play size={16} fill="currentColor" />
                   <span>Google Play</span>
-                </a>
+                </motion.a>
               )}
             </div>
           </Card>
