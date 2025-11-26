@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/Button";
@@ -35,8 +36,15 @@ export function Header() {
         >
             <div className="container mx-auto px-6 sm:px-10 max-w-7xl flex items-center justify-between">
                 <a href="#" className="flex items-center gap-3 group">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-500 ring-1 ring-emerald-500/20 transition-all group-hover:bg-emerald-500/20 group-hover:ring-emerald-500/40">
-                        <span className="font-bold text-lg">GG</span>
+                    <div className="relative h-10 w-10 overflow-hidden rounded-xl">
+                        <Image
+                            src="/Images/goat-logo.png"
+                            alt="GoatGoat logo"
+                            fill
+                            sizes="40px"
+                            className="object-contain"
+                            priority
+                        />
                     </div>
                     <span className="text-lg font-bold tracking-tight text-[var(--foreground)]">
                         GoatGoat

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Github, Twitter, Linkedin } from "lucide-react";
 
 export function Footer() {
@@ -7,8 +8,14 @@ export function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
                     <div className="col-span-1 md:col-span-2">
                         <div className="flex items-center gap-3 mb-6">
-                            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/10 text-emerald-400 ring-1 ring-emerald-500/20">
-                                <span className="font-bold text-sm">GG</span>
+                            <div className="relative h-8 w-8 overflow-hidden rounded-lg">
+                                <Image
+                                    src="/Images/goat-logo.png"
+                                    alt="GoatGoat logo"
+                                    fill
+                                    sizes="32px"
+                                    className="object-contain"
+                                />
                             </div>
                             <span className="text-base font-bold tracking-tight text-slate-100">
                                 GoatGoat
