@@ -3,7 +3,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "GoatGoat - Real-time Grocery",
+  title: "GoatGoat - Real-time Hyper Local Delivery",
   description: "Connects customers, local sellers, and delivery agents in one platform.",
 };
 

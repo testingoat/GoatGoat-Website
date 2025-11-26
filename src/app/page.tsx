@@ -26,7 +26,7 @@ export default function Home() {
               role: "Customer",
               title: "Customer App",
               description:
-                "Shop groceries with live maps, voice search, and real-time order updates.",
+                "Shop MEAT with live maps, voice search, and real-time order updates.",
               ios: { url: "#" },
               android: { url: "#" },
             },
