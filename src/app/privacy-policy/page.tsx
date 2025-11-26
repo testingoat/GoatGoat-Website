@@ -12,7 +12,7 @@ export default function PrivacyPolicy() {
                     <section>
                         <h2 className="text-xl font-semibold text-emerald-400 mb-4">1. Introduction</h2>
                         <p>
-                            GoatGoat ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our Seller App. Please read this privacy policy carefully.
+                            Goat ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our Seller App. Please read this privacy policy carefully.
                         </p>
                     </section>
 

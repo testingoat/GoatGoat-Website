@@ -9,7 +9,7 @@ export function SellerSection() {
             id="sellers"
             eyebrow="For sellers"
             title="Full control from your phone"
-            subtitle="The GoatGoat Seller app turns your phone into a control center for MEAT products, orders, and performance."
+            subtitle="The Goat Seller app turns your phone into a control center for MEAT products, orders, and performance."
         >
             <FeatureGrid
                 items={[

@@ -54,7 +54,7 @@ export function Hero() {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="max-w-xl text-pretty text-lg text-[var(--muted-foreground)] sm:text-xl leading-relaxed"
                     >
-                        GoatGoat connects customers, local sellers, and delivery agents in
+                        Goat Apps connect customers, local sellers, and delivery agents in
                         one platform, with live tracking, instant notifications, and a
                         modern React Native experience.
                     </motion.p>

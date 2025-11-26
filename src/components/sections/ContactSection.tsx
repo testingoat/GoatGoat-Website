@@ -9,7 +9,7 @@ export function ContactSection() {
         <SectionShell
             id="contact"
             eyebrow="Contact"
-            title="Talk to the GoatGoat team"
+            title="Talk to the Goat team"
             subtitle="Use this form for customer support, new seller enquiries, or delivery partner onboarding."
             align="center"
         >

@@ -27,7 +27,7 @@ export function HowItWorks() {
         <SectionShell
             id="how-it-works"
             eyebrow="Flow"
-            title="How GoatGoat connects customers, sellers, and delivery agents"
+            title="How Goat App connect customers, sellers, and delivery agents"
             subtitle="The server orchestrates live updates between the three apps using secure APIs, sockets, and Firebase Cloud Messaging."
             align="center"
         >

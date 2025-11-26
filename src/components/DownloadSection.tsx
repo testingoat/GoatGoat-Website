@@ -25,7 +25,7 @@ export function DownloadSection({ apps }: { apps: AppCard[] }) {
     <SectionShell
       id="download"
       eyebrow="Download"
-      title="Install the GoatGoat apps"
+      title="Install the Goat apps"
       subtitle="Replace the placeholder links with your real App Store and Google Play URLs when you are ready to launch."
       align="center"
       className="bg-[color:var(--background)]"

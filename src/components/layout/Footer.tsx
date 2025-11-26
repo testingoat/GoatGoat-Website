@@ -49,7 +49,7 @@ export function Footer() {
 
                 <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
                     <p className="text-xs text-slate-500">
-                        © {new Date().getFullYear()} GoatGoat. All rights reserved.
+                        © {new Date().getFullYear()} Goat. All rights reserved.
                     </p>
                     <div className="flex gap-6">
                         <a href="#" className="text-slate-500 hover:text-emerald-400 transition-colors"><Twitter size={18} /></a>
