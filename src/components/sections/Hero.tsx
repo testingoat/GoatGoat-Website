@@ -45,7 +45,7 @@ export function Hero() {
                         transition={{ duration: 0.5, delay: 0.1 }}
                         className="text-balance text-4xl font-bold tracking-tight text-[var(--foreground)] sm:text-6xl lg:text-7xl"
                     >
-                        Real-time grocery for <span className="text-gradient-primary">everyone</span> in the loop.
+                        Real-time Fresh Meat <span className="text-gradient-primary">DELIVERED</span> at your Door Step.
                     </motion.h1>
 
                     <motion.p

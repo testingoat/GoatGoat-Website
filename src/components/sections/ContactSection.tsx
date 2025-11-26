@@ -28,14 +28,14 @@ export function ContactSection() {
                             />
                         </div>
                         <div className="flex flex-col gap-2">
-                            <label htmlFor="email" className="text-xs font-medium text-[var(--muted-foreground)]">
-                                Email
+                            <label htmlFor="mobile" className="text-xs font-medium text-[var(--muted-foreground)]">
+                                Mobile
                             </label>
                             <input
-                                id="email"
-                                type="email"
+                                id="mobile"
+                                type="mobile"
                                 className="rounded-xl border border-[color:var(--border)] bg-[color:var(--muted)] px-4 py-2.5 text-sm text-[color:var(--foreground)] outline-none placeholder:text-[color:var(--muted-foreground)] focus:border-emerald-500/60 focus:ring-1 focus:ring-emerald-500/60 transition-all"
-                                placeholder="you@example.com"
+                                placeholder="Mobile Number"
                             />
                         </div>
                     </div>
