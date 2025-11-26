@@ -13,9 +13,10 @@ export function Hero() {
         offset: ["start end", "end start"],
     });
 
-    const phoneOffsetSmall = useTransform(scrollYProgress, [0, 1], [0, 20]);
-    const phoneOffsetMedium = useTransform(scrollYProgress, [0, 1], [0, 35]);
-    const phoneOffsetLarge = useTransform(scrollYProgress, [0, 1], [0, 50]);
+    // Slightly stronger parallax so the effect is noticeable but still subtle
+    const phoneOffsetSmall = useTransform(scrollYProgress, [0, 1], [0, 40]);
+    const phoneOffsetMedium = useTransform(scrollYProgress, [0, 1], [0, 70]);
+    const phoneOffsetLarge = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
     return (
         <section
