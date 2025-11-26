@@ -1,12 +1,13 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { SectionShell } from "@/components/layout/SectionShell";
 import { Card } from "@/components/ui/Card";
 import { buttonVariants } from "@/components/ui/Button";
-import { Apple, Play } from "lucide-react";
+import { Apple, Play, Smartphone, CheckCircle2, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 type StoreLinks = {
   url: string;
@@ -21,6 +22,23 @@ export type AppCard = {
 };
 
 export function DownloadSection({ apps }: { apps: AppCard[] }) {
+  const [phone, setPhone] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
+
+  const handleSendLink = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!phone) return;
+
+    setStatus("loading");
+    // Simulate API call
+    setTimeout(() => {
+      setStatus("success");
+      setPhone("");
+      // Reset after 3 seconds
+      setTimeout(() => setStatus("idle"), 3000);
+    }, 1500);
+  };
+
   return (
     <SectionShell
       id="download"
@@ -30,7 +48,7 @@ export function DownloadSection({ apps }: { apps: AppCard[] }) {
       align="center"
       className="bg-[color:var(--background)]"
     >
-      <div className="grid gap-8 md:grid-cols-3">
+      <div className="grid gap-8 md:grid-cols-3 mb-16">
         {apps.map((app) => (
           <Card key={app.role} className="flex flex-col" tilt>
             <div className="mb-4">
@@ -80,6 +98,73 @@ export function DownloadSection({ apps }: { apps: AppCard[] }) {
             </div>
           </Card>
         ))}
+      </div>
+
+      {/* SMS Link Feature */}
+      <div className="max-w-md mx-auto">
+        <div className="text-center mb-6">
+          <h4 className="text-lg font-semibold text-white mb-2">Get the link via SMS</h4>
+          <p className="text-sm text-slate-400">Enter your phone number and we'll send you a magic link to download the right app for your device.</p>
+        </div>
+
+        <form onSubmit={handleSendLink} className="relative">
+          <div className="flex items-center gap-2 bg-slate-900/50 border border-slate-800 p-1.5 rounded-xl focus-within:border-emerald-500/50 focus-within:ring-1 focus-within:ring-emerald-500/50 transition-all">
+            <div className="pl-3 text-slate-500">
+              <Smartphone size={18} />
+            </div>
+            <input
+              type="tel"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              placeholder="Enter mobile number"
+              className="bg-transparent border-none outline-none text-sm text-white placeholder:text-slate-600 flex-1 h-10"
+              disabled={status !== "idle"}
+            />
+            <button
+              type="submit"
+              disabled={status !== "idle" || !phone}
+              className={cn(
+                "h-10 px-4 rounded-lg text-sm font-medium transition-all flex items-center gap-2",
+                status === "success"
+                  ? "bg-emerald-500 text-white"
+                  : "bg-white text-slate-950 hover:bg-slate-200 disabled:opacity-50 disabled:cursor-not-allowed"
+              )}
+            >
+              <AnimatePresence mode="wait">
+                {status === "loading" ? (
+                  <motion.div
+                    key="loading"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="w-4 h-4 border-2 border-slate-900/30 border-t-slate-900 rounded-full animate-spin"
+                  />
+                ) : status === "success" ? (
+                  <motion.div
+                    key="success"
+                    initial={{ scale: 0.5, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    className="flex items-center gap-1.5"
+                  >
+                    <CheckCircle2 size={16} />
+                    <span>Sent!</span>
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="idle"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="flex items-center gap-1.5"
+                  >
+                    <span>Send Link</span>
+                    <ArrowRight size={14} />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </button>
+          </div>
+        </form>
       </div>
     </SectionShell>
   );

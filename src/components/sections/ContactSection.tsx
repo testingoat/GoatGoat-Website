@@ -33,7 +33,7 @@ export function ContactSection() {
                             </label>
                             <input
                                 id="mobile"
-                                type="mobile"
+                                type="tel"
                                 className="rounded-xl border border-[color:var(--border)] bg-[color:var(--muted)] px-4 py-2.5 text-sm text-[color:var(--foreground)] outline-none placeholder:text-[color:var(--muted-foreground)] focus:border-emerald-500/60 focus:ring-1 focus:ring-emerald-500/60 transition-all"
                                 placeholder="Mobile Number"
                             />

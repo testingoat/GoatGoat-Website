@@ -21,7 +21,7 @@ export function FeatureGrid({ items }: { items: Feature[] }) {
 
   const itemVariant = {
     hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.4 } },
   };
 
   return (
@@ -34,7 +34,7 @@ export function FeatureGrid({ items }: { items: Feature[] }) {
     >
       {items.map((item) => (
         <motion.div key={item.title} variants={itemVariant}>
-          <Card className="h-full">
+          <Card className="h-full hover:border-emerald-500/30 transition-colors duration-300">
             <h3 className="text-lg font-semibold text-[color:var(--foreground)] mb-3">
               {item.title}
             </h3>
