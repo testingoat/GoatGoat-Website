@@ -8,7 +8,7 @@ export function CustomerSection() {
         <SectionShell
             id="customers"
             eyebrow="For customers"
-            title="A smooth, modern grocery app"
+            title="A smooth, modern Hyper-Local Delivery app"
             subtitle="Animations, maps, and voice commands make ordering feel instant while the backend keeps everything in sync."
         >
             <FeatureGrid
